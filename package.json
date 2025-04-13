@@ -1,6 +1,6 @@
 {
   "name": "langchain-storacha-ensemble",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Ensemble learning for LangChain agents with Storacha decentralized storage",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,7 +25,7 @@
   "dependencies": {
     "axios": "^1.6.0",
     "langchain": "^0.1.5",
-   
+    "@web3-storage/w3up-client": "^11.0.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
