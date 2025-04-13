@@ -1,6 +1,6 @@
 {
   "name": "langchain-storacha-ensemble",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ensemble learning for LangChain agents with Storacha decentralized storage",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -44,4 +44,4 @@
     "url": "https://github.com/yourusername/langchain-storacha-ensemble/issues"
   },
   "homepage": "https://github.com/yourusername/langchain-storacha-ensemble#readme"
-} 
+}
