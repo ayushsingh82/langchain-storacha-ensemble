@@ -35,5 +35,13 @@
   },
   "peerDependencies": {
     "langchain": ">=0.0.75"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/langchain-storacha-ensemble.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/langchain-storacha-ensemble/issues"
+  },
+  "homepage": "https://github.com/yourusername/langchain-storacha-ensemble#readme"
 } 

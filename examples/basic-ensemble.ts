@@ -1,7 +1,7 @@
 import { ChatOpenAI } from "langchain/chat_models/openai";
 import { AgentExecutor, createOpenAIFunctionsAgent } from "langchain/agents";
 import { ChatPromptTemplate } from "langchain/prompts";
-import { StorachaAgentWrapper, EnsembleManager } from "langchain-storacha-ensemble";
+import { StorachaAgentWrapper, EnsembleManager } from "../src";
 
 async function runExample() {
   // Create two different LLM models

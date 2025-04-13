@@ -25,13 +25,23 @@ export class StorachaAgentWrapper {
     
     if ('invoke' in agent) {
       // Handle AgentExecutor
-      const result = await agent.invoke({ input });
-      output = result.output;
-      chainOfThought = agent.steps || [];
+      try {
+        // For AgentExecutor
+        if ('runWithCallback' in agent) {
+          const result = await agent.invoke(input);
+          output = result.output || result;
+          chainOfThought = (agent as any).steps || [];
+        } else {
+          // For BaseLanguageModel
+          output = await (agent as BaseLanguageModel).invoke(input);
+          chainOfThought = undefined;
+        }
+      } catch (error) {
+        console.error('Error invoking agent:', error);
+        throw error;
+      }
     } else {
-      // Handle BaseLanguageModel
-      output = await agent.invoke(input);
-      chainOfThought = undefined;
+      throw new Error('Unsupported agent type');
     }
     
     // Prepare data for storage

@@ -1,0 +1,17 @@
+# Source files
+src/
+tests/
+examples/
+
+# Configuration files
+.github/
+.vscode/
+.eslintrc
+.prettierrc
+jest.config.js
+tsconfig.json
+
+# Other files
+.env*
+.gitignore
+*.log 

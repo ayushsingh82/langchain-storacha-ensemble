@@ -33,9 +33,10 @@ export class StorachaClient {
       }
       
       return response.data.cid;
-    } catch (error) {
+    } catch (error: unknown) {
       console.error('Error uploading to Storacha:', error);
-      throw new Error(`Storacha upload failed: ${error.message}`);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      throw new Error(`Storacha upload failed: ${errorMessage}`);
     }
   }
 
@@ -54,16 +55,17 @@ export class StorachaClient {
         }
       );
       
-      return (response.data?.items || []).map(item => {
+      return (response.data?.items || []).map((item: any) => {
         try {
           return JSON.parse(item.content);
         } catch (e) {
           return item.content;
         }
       });
-    } catch (error) {
+    } catch (error: unknown) {
       console.error('Error fetching from Storacha:', error);
-      throw new Error(`Storacha fetch failed: ${error.message}`);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      throw new Error(`Storacha fetch failed: ${errorMessage}`);
     }
   }
 } 
