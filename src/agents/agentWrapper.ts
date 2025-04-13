@@ -23,12 +23,11 @@ export class StorachaAgentWrapper {
     let output;
     let chainOfThought;
     
-    if ('invoke' in agent) {
-      // Handle AgentExecutor
-      try {
-        // For AgentExecutor
+    try {
+      if ('invoke' in agent) {
         if ('runWithCallback' in agent) {
-          const result = await agent.invoke(input);
+          // For AgentExecutor
+          const result = await (agent as any).invoke({ input });
           output = result.output || result;
           chainOfThought = (agent as any).steps || [];
         } else {
@@ -36,12 +35,12 @@ export class StorachaAgentWrapper {
           output = await (agent as BaseLanguageModel).invoke(input);
           chainOfThought = undefined;
         }
-      } catch (error) {
-        console.error('Error invoking agent:', error);
-        throw error;
+      } else {
+        throw new Error('Unsupported agent type');
       }
-    } else {
-      throw new Error('Unsupported agent type');
+    } catch (error) {
+      console.error('Error invoking agent:', error);
+      throw error;
     }
     
     // Prepare data for storage
