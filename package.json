@@ -1,0 +1,39 @@
+{
+  "name": "langchain-storacha-ensemble",
+  "version": "0.1.0",
+  "description": "Ensemble learning for LangChain agents with Storacha decentralized storage",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "langchain",
+    "storacha",
+    "ensemble",
+    "ai",
+    "llm",
+    "decentralized"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "langchain": "^0.1.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.8.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.2"
+  },
+  "peerDependencies": {
+    "langchain": ">=0.0.75"
+  }
+} 
