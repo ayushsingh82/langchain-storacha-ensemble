@@ -2,6 +2,8 @@
 
 Ensemble learning for LangChain agents with Storacha decentralized storage.
 
+npm package link - https://www.npmjs.com/package/langchain-storacha-ensemble/v/0.1.4?activeTab=readme
+
 ## Overview
 
 This package enables collaborative AI by combining LangChain agents with Storacha's decentralized storage for ensemble learning. It allows multiple AI agents to share their inputs, outputs, and reasoning chains, leading to more robust and transparent decision-making.
