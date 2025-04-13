@@ -1,6 +1,6 @@
 {
   "name": "langchain-storacha-ensemble",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Ensemble learning for LangChain agents with Storacha decentralized storage",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^1.6.0",
-    "langchain": "^0.1.5"
+    "langchain": "^0.1.5",
+    "storacha": "^1.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
@@ -35,13 +36,5 @@
   },
   "peerDependencies": {
     "langchain": ">=0.0.75"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yourusername/langchain-storacha-ensemble.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/langchain-storacha-ensemble/issues"
-  },
-  "homepage": "https://github.com/yourusername/langchain-storacha-ensemble#readme"
-}
+  }
+} 
